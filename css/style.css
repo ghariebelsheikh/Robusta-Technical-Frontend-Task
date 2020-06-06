@@ -1,0 +1,205 @@
+:root {
+	--color-white: #fff;
+    --color-black: #202124;
+    --color-blue: #1a73e8;
+    --color-green: #00FF5C;
+    --color-red: #e74c3c;
+    --color-grey-light-1: #dadce0;
+    --color-grey-dark-1: #858585;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #646262;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: "Roboto";
+	outline: none;
+	border: none;
+}
+
+
+html, body {
+	height: 100%;
+	background: var(--color-white);
+}
+
+.align {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-bottom: 8px;
+}
+
+
+.card {
+	margin-top: 28px;
+	height: 100%;
+	max-height: 446px;
+	width: 396px;
+	background: var(--color-white);
+	border: 1px solid var(--color-grey-light-1);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: max-height 0.2s;
+}
+
+.extend {
+	max-height: 550px;
+}
+
+.head {
+	width: 100%;
+	display: flex;
+	height: 72px;
+	border-bottom: 1px solid var(--color-grey-light-1);
+	justify-content: space-between;
+}
+
+.head a {
+	height: 100%;
+	padding: 0 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-grey-dark-1);
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.head .selected {
+	position: relative;
+	color: var(--color-green);
+	color: var(--color-blue);
+	font-weight: 700;
+}
+
+.head .selected:after {
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background: var(--color-blue);
+}
+
+.tabs {
+	height: calc(100% - 72px);
+	display: flex;
+}
+
+form {
+	width: 100%;
+	height: 100%;
+	flex-shrink: 0;
+	padding: 44px 38px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	right: 0;
+	transition: right 0.2s;
+}
+
+.extend form {
+	right: 100%;
+}
+
+.inputs {
+	width: 100%;
+	padding-top: 6px;
+}
+
+.form {
+	padding: 30px 40px;	
+}
+
+.form-control {
+	position: relative;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.form-control .icon {
+	visibility: hidden;
+	position: absolute;
+	right: 10px;
+	width: 16px;
+}
+
+.form-control.success .icon.check {
+	fill: var(--color-green);
+	visibility: visible;
+}
+
+.form-control.error .icon.info-circle {
+	fill: var(--color-red);
+	visibility: visible;
+}
+
+.form-control input {
+	width: 100%;
+	display: block;
+	font-size: 14px;
+	font-family: inherit;
+	border-radius: 4px;
+	border: 1px solid var(--color-grey-dark-2);
+	padding: 12px 40px;
+	color: var(--color-grey-dark-3);
+}
+
+.form-control input:focus {
+	outline: 0;
+	border: 2px solid var(--color-black);
+}
+
+
+.form-control.success input {
+	border-color: var(--color-green);
+}
+
+.form-control.error input {
+	border-color: var(--color-red);
+}
+
+.form-control small {
+	color: var(--color-red);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form-control .icon-field {
+	width: 16px;
+	position: absolute;
+	left: 19px;
+	fill: var(--color-grey-dark-1);
+}
+
+.card button {
+	width: 100%;
+	display: block;
+	background: var(--color-blue);
+	padding: 12px 14px;
+	border-radius: 4px;
+	color: var(--color-white);
+	font-weight: 700;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+
